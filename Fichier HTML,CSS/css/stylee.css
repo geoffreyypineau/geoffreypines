@@ -1,0 +1,194 @@
+:root {
+  --navbar-background-color: #f2f2f2;
+  --navbar-item-hovered-color:white;
+  --navbar-separator-color:#ececec;
+  --navbar-icon-color:#646c79;
+  --navbar-text-color:black;
+  --navbar-transition-speed: .2s;
+  --primary-color:#7C4DFF;
+  --navbar-logo-background-color:#e2dfe4;
+}
+
+
+body, html, header, h1{
+	margin:0px;
+	padding:0px
+}
+
+header, body, html{
+	width:100%;
+	height:100%;
+}
+
+/*Background*/
+body{
+	background: url("https://www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg")center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/*Style et emplacement de l'écrit*/
+h1{
+	font-size:48px;
+	padding: 20px 0px 0 50px;
+	font-family: 'Lobster', cursive;
+}
+
+	
+.titre{
+	font-family: 'Reem Kufi', sans-serif;
+	font-size:50px;
+	vertical-align:center;
+	text-align:center;
+	padding:10px;
+}
+
+.texte1{
+	font-family: 'Quicksand', sans-serif;
+	font-size:35px;
+	vertical-align:center;
+	text-align:center;
+	padding:10px;
+	margin-left:200px;
+	margin-right:200px;
+	line-height:40px;
+}
+
+.texte2{
+	font-family: 'Quicksand', sans-serif;
+	font-size:35px;
+	vertical-align:center;
+	text-align:center;
+	padding:10px;
+	margin-left:200px;
+	margin-right:200px;
+	line-height:40px;
+}
+.img3{
+  width:130px;
+  margin-right:auto;
+  margin-left:auto;
+  padding:3px 702px;
+  border:1px solid #CCC;
+  box-shadow:0px 0px 17px #BBB;
+  background-color:#FFFFFF;
+  position: fixed;
+}
+.texte3{
+	font-family: 'Quicksand', sans-serif;
+	font-size:35px;
+	vertical-align:center;
+	text-align:center;
+	padding:10px;
+	margin-left:200px;
+	margin-right:200px;
+	line-height:40px;
+}
+
+.navbar {
+  width:5rem;
+  position:fixed;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  background:var(--navbar-background-color);
+  box-shadow: rgba(12,43, 30, 0.2) 0 4px 14px;
+  transition: width var(--navbar-transition-speed) ease;
+}
+
+.navbar:hover {
+  width:15rem;
+}
+
+.navbar_menu {
+  list-style: none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height:100%;
+}
+
+.navbar-item {
+  width: 100%;
+  border-bottom:solid 1px var(--navbar-separator-color);
+  transition: background-color var(--navbar-transition-speed);
+}
+
+.navbar-item:hover {
+  background-color:var(--navbar-item-hovered-color);
+}
+
+.navbar-item:last-child {
+  margin-top:auto;
+}
+
+.navbar-link {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:5rem;
+  width:100%;
+  text-decoration: none;
+}
+
+.navbar-icon {
+  text-align: center;
+  font-size: 1.5rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  color:var(--navbar-icon-color);
+  transition:var(--navbar-transition-speed);
+}
+
+.navbar-item:hover .navbar-icon {
+  color:var(--primary-color);
+}
+
+.navbar-title {
+  color:var(--navbar-text-color);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.navbar:not(:hover) .navbar-title {
+  display:none;
+}
+
+.logo {
+  background:var(--navbar-logo-background-color);
+}
+
+.logo .navbar-title {
+  font-size:1.5rem;
+  font-weight:bold;
+  margin-left:1.5rem;
+}
+
+.navbar:hover .logo .navbar-icon {
+  transform:rotate(180deg);
+}
+
+/*
+** RESPONSIVE
+*/
+
+@media only screen and (max-width:1024px) {
+  .navbar {
+    top:auto;
+    width:100%;
+    bottom:0px;
+  }
+
+  .navbar:hover {
+    width:100%;
+  }
+
+  .navbar-menu {
+    flex-direction: row;
+  }
+
+  .logo {
+    display:none;
+  }
